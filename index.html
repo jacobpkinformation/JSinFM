@@ -8,83 +8,17 @@
     <title>JSDev</title>
   </head>
   <body>
-    <h1>Alright. You're set.</h1>
-    <h2>Now build something amazing!</h2>
-    <button type="button">Click Me!</button>
-    // New
-    <!--
-    A slider with track fill, configurable tick marks and min/max labels
-
-    Design by Outcrowd https://dribbble.com/shots/9659984-Mobile-App-Mail-Service
-    -->
-    <div id="wrapper">
-      <div id="sliderContainer">
-          <div class="tick-slider">
-              <div class="tick-slider-header">
-                  <h5><label for="weightSlider">Total weight</label></h5>
-                  <h5>kg</h5>
-              </div>
-              <div class="tick-slider-value-container">
-                  <div id="weightLabelMin" class="tick-slider-label">0</div>
-                  <div id="weightLabelMax" class="tick-slider-label">40</div>
-                  <div id="weightValue" class="tick-slider-value"></div>
-              </div>
-              <div class="tick-slider-background"></div>
-              <div id="weightProgress" class="tick-slider-progress"></div>
-              <div id="weightTicks" class="tick-slider-tick-container"></div>
-              <input
-                  id="weightSlider"
-                  class="tick-slider-input"
-                  type="range"
-                  min="0"
-                  max="40"
-                  step="5"
-                  value="9"
-                  data-tick-step="5"
-                  data-tick-id="weightTicks"
-                  data-value-id="weightValue"
-                  data-progress-id="weightProgress"
-                  data-handle-size="18"
-                  data-min-label-id="weightLabelMin"
-                  data-max-label-id="weightLabelMax"
-              />
-          </div>
-          <div class="tick-slider">
-              <div class="tick-slider-header">
-                  <h5><label for="sizeSlider">Total size</label></h5>
-                  <h5>cm</h5>
-              </div>
-              <div class="tick-slider-value-container">
-                  <div id="sizeLabelMin" class="tick-slider-label">0</div>
-                  <div id="sizeLabelMax" class="tick-slider-label">300</div>
-                  <div id="sizeValue" class="tick-slider-value"></div>
-              </div>
-              <div class="tick-slider-background"></div>
-              <div id="sizeProgress" class="tick-slider-progress"></div>
-              <div id="sizeTicks" class="tick-slider-tick-container"></div>
-              <input
-                  id="sizeSlider"
-                  class="tick-slider-input"
-                  type="range"
-                  min="0"
-                  max="300"
-                  step="25"
-                  value="150"
-                  data-tick-step="25"
-                  data-tick-id="sizeTicks"
-                  data-value-id="sizeValue"
-                  data-progress-id="sizeProgress"
-                  data-handle-size="18"
-                  data-min-label-id="sizeLabelMin"
-                  data-max-label-id="sizeLabelMax"
-              />
-          </div>
+    
+    <div class="range">
+      <input type="range" min="0" max="4">
+      <div class="ticks">
+        <span class="tick"></span>
+        <span class="tick"></span>
+        <span class="tick"></span>
+        <span class="tick"></span>
+        <span class="tick"></span>
       </div>
     </div>
 
-
-    <script type="module">
-      import "./src/index.js";
-    </script>
   </body>
 </html>
