@@ -1,7 +1,21 @@
-//Tick width & range thumb width need to be in sync, that's why I'm using the $unit variable.
 $unit: 10px;
 
-//Some basic setup first
+:root {
+  --yellow: #ffd049;
+  --light-yellow: #d2e0fd;
+  --orange: #4D6EBE;
+  --light-gray: #e3e4e8;
+  --gray: #71738b;
+  --light-blue: #7a7c93;
+  --blue: #34385a;
+
+  --slider-handle-size: 14px;
+  --slider-handle-border-radius: 2px;
+  --slider-handle-margin-top: -4px;
+  --slider-track-height: 6px;
+  --slider-track-border-radius: 4px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -14,14 +28,12 @@ body {
   background: white;
 }
 
-//Some range styling.
-//Using mixins because each major browser needs a separate selector to style parts of the range input, combining selectors would invalidate the whole selector on each browser
 @mixin range-track {
   -webkit-appearance: none;
   width: 100%;
   height: $unit * 4;
   color: transparent;
-  background: lightgray;
+  background: var(--light-yellow);
   border-radius: 999px;
   border: none;
 }
@@ -30,7 +42,7 @@ body {
   height: $unit * 4;
   width: $unit * 4;
   border-radius: 30px;
-  background: black;
+  background: var(--orange);
   box-shadow: 0px 2px 10px -2px black(1);
 }
 input[type="range"] {
@@ -65,12 +77,10 @@ input[type="range"]::-ms-thumb {
   @include range-thumb();
 }
 
-//And now the ticks
 .ticks {
   display: flex;
   justify-content: space-between;
 
-  //We need left & right padding that's half the width of the range thumb, so all ticks align with the center of the thumb
   padding: $unit $unit * 2;
 }
 .tick {
@@ -78,9 +88,8 @@ input[type="range"]::-ms-thumb {
   display: flex;
   justify-content: center;
   width: 1px;
-  background: gray;
+  background: var(--blue);
 
-  //Cap the height of the tick & push text down, so the tick renders as a little line and the text doesn't overlap the line. Also add margin, so the container expands enough that the next element you'll add won't overlap the ticks.
   height: $unit;
   line-height: $unit * 5;
   margin-bottom: $unit * 2;
