@@ -2,12 +2,10 @@ $unit: 10px;
 
 :root {
   --yellow: #ffd049;
-  --light-yellow: #d2e0fd;
-  --orange: #4D6EBE;
+  --light-blue: #d2e0fd;
+  --blue: #4D6EBE;
   --light-gray: #e3e4e8;
   --gray: #71738b;
-  --light-blue: #7a7c93;
-  --blue: #34385a;
 
   --slider-handle-size: 14px;
   --slider-handle-border-radius: 2px;
@@ -31,9 +29,10 @@ body {
 @mixin range-track {
   -webkit-appearance: none;
   width: 100%;
+  // padding-top: $unit * 2;
   height: $unit * 4;
   color: transparent;
-  background: var(--light-yellow);
+  background: var(--light-blue);
   border-radius: 999px;
   border: none;
 }
@@ -42,7 +41,7 @@ body {
   height: $unit * 4;
   width: $unit * 4;
   border-radius: 30px;
-  background: var(--orange);
+  background: var(--blue);
   box-shadow: 0px 2px 10px -2px black(1);
 }
 input[type="range"] {
